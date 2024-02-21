@@ -33,3 +33,17 @@ class WordFinder:
 
     def random(self):
         return choice(self.word_list)
+
+
+class SpecialWordFinder(WordFinder):
+    """Subclass of WordFinder that omits blank lines and comment lines"""
+
+    def __init__(self, location):
+        super().__init__(location)
+        self.remove_special_words()
+
+
+    def remove_special_words(self):
+        for word in self.word_list:
+            if (word.startswith("#") or len(word) == 0):
+                self.word_list.remove(word)

@@ -1,3 +1,9 @@
-cat
-dog
-horse
+# Veggies
+
+kale
+parsnips
+
+# Fruits
+
+apple
+mango
